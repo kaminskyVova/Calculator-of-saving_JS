@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preload" href="./font/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./css/style.min.css">
+
+  <title>Personal budget calculator</title>
+</head>
+
+<body>
+  <h1>Personal budget calculator</h1>
+  <section class="main">
+
+    <div class="calc">
+
+      <div class="data">
+        <div class="salary">
+          <div class="salary-title title">Monthly income*</div>
+          <input type="text" class="salary-amount" placeholder="
+          Amount">
+        </div>
+
+        <div class="income">
+          <div class="income-title title">Additional income</div>
+          <div class="income-items">
+            <input type="text" class="income-title" placeholder="Name">
+            <input type="text" class="income-amount" placeholder="
+            Amount">
+          </div>
+
+          <button class="btn_plus income_add">+</button>
+        </div>
+
+        <div class="additional_income">
+          <div class="additional_income-title title">Possible income</div>
+          <input type="text" class="additional_income-item" placeholder="Name">
+          <input type="text" class="additional_income-item" placeholder="Name">
+        </div>
+
+        <div class="expenses">
+          <div class="expenses-title title"> Mandatory expenses</div>
+          <div class="expenses-items">
+            <input type="text" class="expenses-title" placeholder="Name">
+            <input type="text" class="expenses-amount" placeholder="
+            Amount">
+          </div>
+
+          <button class="btn_plus expenses_add">+</button>
+        </div>
+        <div class="additional_expenses">
+          <div class="additional_expenses-title title">Possible expenses <span>(list through comma)</span></div>
+          <input type="text" class="additional_expenses-item" placeholder="title">
+
+        </div>
+
+        <div class="deposit">
+          <label class="deposit-label title">Deposit
+            <input id="deposit-check" type="checkbox">
+            <span class="deposit-checkmark"></span>
+          </label>
+          <select class="deposit-bank">
+            <option value="">Percent</option>
+            <option value="4">Sberbank
+            </option>
+            <option value="5">Gazprom Bank</option>
+            <option value="6">Tinkoff Babk</option>
+            <option value="7">MTS Bank</option>
+            <option value="8">Absolut Bank</option>
+            <option value="other">Other</option>
+          </select>
+          <div class="deposit-calc">
+            <input type="text" class="deposit-amount" placeholder="
+            Amount">
+            <input type="text" class="deposit-percent" placeholder="Percent">
+          </div>
+        </div>
+
+        <div class="target">
+          <span class="target-title title">Want to save</span>
+          <input type="text" class="target-amount" placeholder="Amount">
+        </div>
+
+        <div class="period">
+          <div class="title period-title">Savings Calculation Period</div>
+          <input class="period-select" type="range" step="1" min="1" max="12" value="1">
+          <div class="title period-amount">1</div>
+        </div>
+
+      </div>
+
+      <div class="result">
+        <div class="result-budget_month">
+          <span class="title">Monthly income</span>
+          <input type="text" class="result-total budget_month-value" placeholder="0" disabled>
+        </div>
+        <div class="result-budget_day">
+          <span class="title">Daily budget</span>
+          <input type="text" class="result-total budget_day-value" placeholder="0">
+        </div>
+
+        <div class="result-expenses_month">
+          <span class="title">Monthly expense</span>
+          <input type="text" class="result-total expenses_month-value" placeholder="0" disabled>
+        </div>
+        <div class="result-additional_income">
+          <span class="title">Possible income</span>
+          <input type="text" class="result-total additional_income-value" placeholder="title" disabled>
+        </div>
+        <div class="result-additional_expenses">
+          <span class="title">Possible expenses</span>
+          <input type="text" class="result-total additional_expenses-value" placeholder="title" disabled>
+        </div>
+
+        <div class="result-income_period">
+          <span class="title">Savings for the period</span>
+          <input type="text" class="result-total income_period-value" placeholder="0" disabled>
+        </div>
+        <div class="result-target_month">
+          <span class="title">Monthly goal completion period</span>
+          <input type="text" class="result-total target_month-value" placeholder="Period" disabled>
+        </div>
+        <div class="control">
+          <button id="start">Calculate</button>
+          <button id="cancel">Reset</button>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </section>
+  <!--<script src="./script/oop.js"></script>-->
+  <!-- <script src="index.js"></script> -->
+  <script src="script.js"></script>
+</body>
+
+</html>
